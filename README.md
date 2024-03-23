@@ -79,11 +79,6 @@ services:
 
 Ideally, you would use a reverse proxy such as nginx or caddy to handle TLS certificates.
 
-#### Using a binary release
-
-1. Grab the latest binary from the [releases](https://github.com/andreimarcu/linx-server/releases), then run `go install`
-2. Run `linx-server -config path/to/linx-server.conf`
-
 ## Usage
 
 #### Configuration
@@ -209,30 +204,6 @@ Run linx-server normally.
 
 ## Development
 
-Any help is welcome, PRs will be reviewed and merged accordingly.  
-The official IRC channel is #linx on irc.oftc.net
+Simply run the following in your project's working directory (root folder for the project)
 
-1. `go get -u github.com/andreimarcu/linx-server `
-2. `cd $GOPATH/src/github.com/andreimarcu/linx-server `
-3. `go build && ./linx-server`
-
-## License
-
-Copyright (C) 2015 Andrei Marcu
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-
-## Author
-
-Andrei Marcu, https://andreim.net/
+`go build && ./linx-server`
