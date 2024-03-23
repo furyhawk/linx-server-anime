@@ -4,7 +4,7 @@ Self-hosted file/media sharing website. Anime-ified.
 
 This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server/ with changes to the theming to make it anime-ified.
 
-### Clients
+## Clients
 
 **Official**
 
@@ -15,7 +15,7 @@ This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server
 - Android: **LinxShare** - [Source](https://github.com/iksteen/LinxShare/) | [Google Play](https://play.google.com/store/apps/details?id=org.thegraveyard.linxshare)
 - CLI: **golinx** - [Source](https://github.com/mutantmonkey/golinx)
 
-### Features
+## Features
 
 - Display common filetypes (image, video, audio, markdown, pdf)
 - Display syntax-highlighted code with in-place editing
@@ -23,7 +23,7 @@ This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server
 - Torrent download of files using web seeding
 - File expiry, deletion key, file access key, and random filename options
 
-### Screenshots
+## Screenshots
 
 <img width="730" src="./docs/home.png" />
 
@@ -81,7 +81,7 @@ Ideally, you would use a reverse proxy such as nginx or caddy to handle TLS cert
 
 ## Usage
 
-#### Configuration
+### Configuration
 
 All configuration options are accepted either as arguments or can be placed in a file as such (see example file linx-server.conf.example in repo):
 
@@ -95,7 +95,7 @@ maxexpiry = 86400
 
 ...and then run `linx-server -config path/to/linx-server.conf`
 
-#### Options
+### Options
 
 | Option                                  | Description                                                                                                                                                                                                                                                                            |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -121,7 +121,7 @@ maxexpiry = 86400
 | `disable-access-key = true`             | Disables access key usage. (Default is false.)                                                                                                                                                                                                                                         |
 | `default-random-filename = true`        | Makes it so the random filename is not default if set false. (Default is true.)                                                                                                                                                                                                        |
 
-#### Cleaning up expired files
+### Cleaning up expired files
 
 When files expire, access is disabled immediately, but the files and metadata
 will persist on disk until someone attempts to access them. You can set the following option to run cleanup every few minutes. This can also be done using a separate utility found the linx-cleanup directory.
@@ -130,7 +130,7 @@ will persist on disk until someone attempts to access them. You can set the foll
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `cleanup-every-minutes = 5` | How often to clean up expired files in minutes (default is 0, which means files will be cleaned up as they are accessed) |
 
-#### Require API Keys for uploads
+### Require API Keys for uploads
 
 | Option                                    | Description                                                                                                                                                                                                                              |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ will persist on disk until someone attempts to access them. You can set the foll
 
 A helper utility `linx-genkey` is provided which hashes keys to the format required in the auth files.
 
-#### Storage backends
+### Storage backends
 
 The following storage backends are available:
 
@@ -149,20 +149,20 @@ The following storage backends are available:
 | LocalFS | Enabled by default, this backend uses the filesystem                                                                                                                                                                                                                                                                                                                                                                                                              | `filespath = files/` -- Path to store uploads (default is files/)<br />`metapath = meta/` -- Path to store information about uploads (default is meta/)                                                                                                                                                                                                                                                                                                                                         |
 | S3      | Use with any S3-compatible provider.<br> This implementation will stream files through the linx instance (every download will request and stream the file from the S3 bucket). File metadata will be stored as tags on the object in the bucket.<br><br>For high-traffic environments, one might consider using an external caching layer such as described [in this article](https://blog.sentry.io/2017/03/01/dodging-s3-downtime-with-nginx-and-haproxy.html). | `s3-endpoint = https://...` -- S3 endpoint<br>`s3-region = us-east-1` -- S3 region<br>`s3-bucket = mybucket` -- S3 bucket to use for files and metadata<br>`s3-force-path-style = true` (optional) -- force path-style addressing (e.g. https://<span></span>s3.amazonaws.com/linx/example.txt)<br><br>Environment variables to provide:<br>`AWS_ACCESS_KEY_ID` -- the S3 access key<br>`AWS_SECRET_ACCESS_KEY ` -- the S3 secret key<br>`AWS_SESSION_TOKEN` (optional) -- the S3 session token |
 
-#### SSL with built-in server
+### SSL with built-in server
 
 | Option                        | Description                                                                |
 | ----------------------------- | -------------------------------------------------------------------------- |
 | `certfile = path/to/your.crt` | Path to the ssl certificate (required if you want to use the https server) |
 | `keyfile = path/to/your.key`  | Path to the ssl key (required if you want to use the https server)         |
 
-#### Use with http proxy
+### Use with http proxy
 
 | Option          | Description                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------- |
 | `realip = true` | let linx-server know you (nginx, etc) are providing the X-Real-IP and/or X-Forwarded-For headers. |
 
-#### Use with fastcgi
+### Use with fastcgi
 
 | Option           | Description           |
 | ---------------- | --------------------- |
@@ -172,7 +172,7 @@ The following storage backends are available:
 
 Linx-server supports being deployed in a subdirectory (ie. example.com/mylinx/) as well as on its own (example.com/).
 
-#### 1. Using fastcgi
+### 1. Using fastcgi
 
 A suggested deployment is running nginx in front of linx-server serving through fastcgi.
 This allows you to have nginx handle the TLS termination for example.  
@@ -194,11 +194,11 @@ server {
 
 And run linx-server with the `fastcgi = true` option.
 
-#### 2. Using the built-in https server
+### 2. Using the built-in https server
 
 Run linx-server with the `certfile = path/to/cert.file` and `keyfile = path/to/key.file` options.
 
-#### 3. Using the built-in http server
+### 3. Using the built-in http server
 
 Run linx-server normally.
 
