@@ -50,7 +50,7 @@ Then run the container with the following command:
 docker run -p 8080:8080 -v /path/to/linx-server.conf:/data/linx-server.conf -v /path/to/meta:/data/meta -v /path/to/files:/data/files linx-server-anime -config /data/linx-server.conf
 ```
 
-#### Using a build from Docker Hub
+### Using a build from Docker Hub
 
 Example running
 
