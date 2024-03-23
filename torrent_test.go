@@ -55,7 +55,7 @@ func TestCreateTorrent(t *testing.T) {
 func TestCreateTorrentWithImage(t *testing.T) {
 	var decoded torrent.Torrent
 
-	f, err := os.Open("static/images/404.jpg")
+	f, err := os.Open("static/images/404.webp")
 	if err != nil {
 		t.Fatal(err)
 	}
