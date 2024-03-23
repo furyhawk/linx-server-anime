@@ -4,10 +4,6 @@ Self-hosted file/media sharing website. Anime-ified.
 
 This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server/ with changes to the theming to make it anime-ified.
 
-### Demo
-
-You can see what it looks like using the demo: [https://put.icu/](https://put.icu/)
-
 ### Clients
 
 **Official**
