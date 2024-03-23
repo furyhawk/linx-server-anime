@@ -31,15 +31,31 @@ This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server
 
 ## Getting started
 
-#### Using Docker
+### Using Docker
 
 1. Create directories `files` and `meta` and run `chown -R 65534:65534 meta && chown -R 65534:65534 files`
 2. Create a config file (example provided in repo), we'll refer to it as **linx-server.conf** in the following examples
 
+#### Building from source
+
+Clone the repository, and with docker installed, in the directory with the Dockerfile, run:
+
+```
+docker build -t linx-server-anime .
+```
+
+Then run the container with the following command:
+
+```
+docker run -p 8080:8080 -v /path/to/linx-server.conf:/data/linx-server.conf -v /path/to/meta:/data/meta -v /path/to/files:/data/files linx-server-anime -config /data/linx-server.conf
+```
+
+#### Using a build from Docker Hub
+
 Example running
 
 ```
-docker run -p 8080:8080 -v /path/to/linx-server.conf:/data/linx-server.conf -v /path/to/meta:/data/meta -v /path/to/files:/data/files andreimarcu/linx-server -config /data/linx-server.conf
+docker run -p 8080:8080 -v /path/to/linx-server.conf:/data/linx-server.conf -v /path/to/meta:/data/meta -v /path/to/files:/data/files liampillay/linx-server-anime -config /data/linx-server.conf
 ```
 
 Example with docker-compose
@@ -49,7 +65,7 @@ version: '2.2'
 services:
   linx-server:
     container_name: linx-server
-    image: andreimarcu/linx-server
+    image: liampillay/linx-server-anime
     command: -config /data/linx-server.conf
     volumes:
       - /path/to/files:/data/files
