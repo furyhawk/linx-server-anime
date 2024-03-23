@@ -27,10 +27,7 @@ This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server
 
 <img width="730" src="./docs/home.png" />
 
-<img width="180" src="./docs/uploaded.png" /> 
-<img width="180" src="./docs/uploaded_md.png" /> 
-<img width="180" src="./docs/uploaded_html.png" />
-<img width="180" src="./docs/password.png" />
+<img width="180" src="./docs/uploaded.png" /> <img width="180" src="./docs/uploaded_md.png" /> <img width="180" src="./docs/uploaded_html.png" /> <img width="180" src="./docs/password.png" />
 
 ## Getting started
 
