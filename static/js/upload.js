@@ -70,7 +70,7 @@ Dropzone.options.dropzone = {
 
         var fileLabelLink = document.createElement("a");
         fileLabelLink.href = resp.url;
-        fileLabelLink.target = "_blank";
+        // fileLabelLink.target = "_blank";
         fileLabelLink.innerHTML = resp.url;
         file.fileLabel.innerHTML = "";
         file.fileLabelLink = fileLabelLink;
