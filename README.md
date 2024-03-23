@@ -25,9 +25,12 @@ This repository is simply a clone of https://github.com/ZizzyDizzyMC/linx-server
 
 ### Screenshots
 
-<img width="730" src="https://user-images.githubusercontent.com/4650950/76579039-03c82680-6488-11ea-8e23-4c927386fbd9.png" />
+<img width="730" src="./docs/home.png" />
 
-<img width="180" src="https://user-images.githubusercontent.com/4650950/76578903-771d6880-6487-11ea-8baf-a4a23fef4d26.png" /> <img width="180" src="https://user-images.githubusercontent.com/4650950/76578910-7be21c80-6487-11ea-9a0a-587d59bc5f80.png" /> <img width="180" src="https://user-images.githubusercontent.com/4650950/76578908-7b498600-6487-11ea-8994-ee7b6eb9cdb1.png" /> <img width="180" src="https://user-images.githubusercontent.com/4650950/76578907-7b498600-6487-11ea-8941-8f582bf87fb0.png" />
+<img width="180" src="./docs/uploaded.png" /> 
+<img width="180" src="./docs/uploaded_md.png" /> 
+<img width="180" src="./docs/uploaded_html.png" />
+<img width="180" src="./docs/password.png" />
 
 ## Getting started
 
