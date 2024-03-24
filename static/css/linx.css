@@ -1,3 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: fit-content;
+  min-width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
 body {
   background-color: #E8ECF0;
   color: #556A7F;
@@ -16,6 +30,7 @@ body {
 #container {
   display: table-cell;
   min-width: 200px;
+  padding: 15px;
 }
 
 #header a {
@@ -339,6 +354,7 @@ body {
 .display-image {
     margin-bottom: -6px;
     max-width: 800px;
+    width: 100%;
 }
 
 .display-pdf {
@@ -385,6 +401,7 @@ body {
   right: 0;
   user-select: none;
   pointer-events: none;
+  z-index: -1;
 }
 
 #mascot > img {
@@ -407,7 +424,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
 }
 
