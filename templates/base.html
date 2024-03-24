@@ -44,7 +44,9 @@
 
 			{% block content %}{% endblock %}
 			<div id="footer">
-				<p>{{ extra_footer_text }}  </p><a href="https://github.com/LiamPerson/linx-server-anime">Powered by linx-server-anime</a>
+				{% if hide_powered_by != true %}
+				<p>{{ extra_footer_text }} </p><a href="https://github.com/LiamPerson/linx-server-anime">Powered by linx-server-anime</a>
+				{% endif %}
 			</div>
 
 		</div>

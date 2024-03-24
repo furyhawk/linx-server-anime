@@ -92,6 +92,7 @@ func renderTemplate(tpl *pongo2.Template, context pongo2.Context, r *http.Reques
 	// Add the context for Config.disableAccessKey
 	context["disable_access_key"] = Config.disableAccessKey
 	context["default_randomize"] = Config.defaultRandomFilename
+	context["hide_powered_by"] = Config.hidePoweredBy
 
 	var a string
 	if Config.authFile == "" {
