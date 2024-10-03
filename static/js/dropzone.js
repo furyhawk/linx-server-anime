@@ -1666,7 +1666,7 @@
    * Summary: cross-browser wrapper for DOMContentLoaded
    * Updated: 20101020
    * License: MIT
-   * Version: 1.2
+   * Version: 1.2.1
    *
    * URL:
    * http://javascript.nwbox.com/ContentLoaded/
